@@ -1,0 +1,207 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #003366;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.5s ease;
+}
+
+header.sticky {
+    background-color: #002244;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    transition: transform 0.5s;
+}
+
+header .logo:hover {
+    transform: rotate(360deg);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+.cta {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta:hover {
+    background-color: #e6b800;
+    transform: translateY(-5px);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    background-size: cover;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+}
+
+.hero-overlay h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-overlay p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.search-form input,
+.search-form button {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.search-form button {
+    background-color: #ffcc00;
+    color: #003366;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #e6b800;
+}
+
+/* Animations */
+.animate-zoom {
+    animation: zoomIn 1s ease forwards;
+}
+
+.animate-slide {
+    animation: slideInLeft 1.5s ease forwards;
+}
+
+/* Keyframes for Animations */
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Features Section */
+.features {
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 60px 20px;
+    background-color: #e6f7ff;
+    text-align: center;
+}
+
+/* Destinations Section */
+.destinations {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.destination-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.destination img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+.destination:hover img {
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+}
